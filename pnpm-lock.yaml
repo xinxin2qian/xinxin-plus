@@ -4,8 +4,15 @@ importers:
 
   .:
     specifiers:
+      '@xinxin-plus/components': workspace:^1.0.0
+      '@xinxin-plus/theme-chalk': workspace:^1.0.0
+      '@xinxin-plus/utils': workspace:^1.0.0
       typescript: ^4.9.4
       vue: ^3.2.36
+    dependencies:
+      '@xinxin-plus/components': link:packages/components
+      '@xinxin-plus/theme-chalk': link:packages/theme-chalk
+      '@xinxin-plus/utils': link:packages/utils
     devDependencies:
       typescript: 4.9.4
       vue: 3.2.36
