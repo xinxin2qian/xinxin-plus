@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@xinxin-plus/components": "workspace:^1.0.0",
+    "@xinxin-plus/constants": "workspace:^1.0.0",
     "@xinxin-plus/theme-chalk": "workspace:^1.0.0",
     "@xinxin-plus/utils": "workspace:^1.0.0"
   }
