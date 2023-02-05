@@ -1,10 +1,12 @@
 import { ExtractPropTypes, PropType } from "vue";
 import type { ButtonNativeType, ButtonSizeType, ButtonType } from "./interface";
-import { buttonTypes, buttonNativeTypes } from "./interface";
+// import { buttonTypes, buttonNativeTypes } from "./interface";
 import { componentSizes } from "@xinxin-plus/constants";
 // export const ButtonType = ["primary", "success", "info", "warning", "danger", "text"];
 // export const ButtonSize = ["large", "medium", "small", "mini"];
-export const buttonProps = {
+export const buttonTypes = ["default", "primary", "success", "info", "warning", "danger", "text"] as const;
+export const buttonNativeTypes = ['button', 'submit', 'reset'] as const;
+export const Props = {
     type: {
         type: String as PropType<ButtonType>,
         default: (): ButtonType => "default",
@@ -58,4 +60,4 @@ export const Emits = {
     click: (evt: MouseEvent): MouseEvent => evt
 }
 // vue自带的ExtractPropTypes进行包装，导出的才能是真正的类型
-export type ButtonProps = ExtractPropTypes<typeof buttonProps>
+export type ButtonProps = ExtractPropTypes<typeof Props>

@@ -1,22 +1,40 @@
 <template>
-    <button>
-        <slot>{{ p.size }} || {{ p.type }}</slot>
+    <button class="xin-button" :class="classList" :type="nativeType" :auto-focus="autoFocus" :disabled="disabled || loading" @click="handlerClick">
+        <slot></slot>
     </button>
 </template>
-<script lang="ts" setup>
+<script lang="ts" setup name="XinButton">
 import { computed } from 'vue';
-import { buttonProps } from './button';
-defineOptions({
-  name: 'XinButton'
+import { Props, Emits } from './button';
+// defineOptions({
+//   name: 'XinButton'
+// })
+const props = defineProps(Props);
+const emits = defineEmits(Emits);
+const classList = computed(() => {
+    const { type, size, round, plain, circle, disabled, loading } = props
+    return [
+        {
+            [`xin-button--${type}`]: type,
+            [`xin-button--${size}`]: size,
+            [`is-disabled`]: disabled,
+            [`is-loading`]: loading,
+            [`is-round`]: round,
+            [`is-plain`]: plain,
+            [`is-circle`]: circle
+        }
+    ]
 })
-const props = defineProps(buttonProps);
-const p = computed(() => {
-    const { size = "meduim", type = "text" } = props;
-    return {
-        size,
-        type
-    }
-})
+function handlerClick (evt: MouseEvent): void {
+    emits("click", evt);
+}
+// const p = computed(() => {
+//     const { size = "meduim", type = "text" } = props;
+//     return {
+//         size,
+//         type
+//     }
+// })
 // export default defineComponent({
 //     name: "XinButton",
 //     props: buttonProps,
