@@ -3,3 +3,4 @@
 
 echo 来自husky的commit-msg
 npx commitlint --edit "$1"
+# npx commitlint

@@ -19,6 +19,7 @@ importers:
       eslint-config-prettier: ^8.6.0
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-vue: ^9.9.0
+      fast-glob: ^3.2.12
       husky: ^8.0.3
       lint-staged: ^13.1.1
       postcss: ^8.4.19
@@ -50,6 +51,7 @@ importers:
       eslint-config-prettier: 8.6.0_eslint@8.33.0
       eslint-plugin-prettier: 4.2.1_jqplj6qf3uqpxpu4gdyhwwasnq
       eslint-plugin-vue: 9.9.0_eslint@8.33.0
+      fast-glob: 3.2.12
       husky: 8.0.3
       lint-staged: 13.1.1
       postcss-scss: 4.0.6_postcss@8.4.21

@@ -10,7 +10,8 @@
     "lint:css": "stylelint packages/theme-chalk/src/**/*.scss --fix --custom-syntax postcss-scss",
     "prepare": "husky install",
     "postinstall": "npx husky install",
-    "lint:staged": "lint-staged",
+    "lint-staged": "lint-staged --config lint-staged.config.js",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
     "commit": "git-cz"
   },
   "author": "",
@@ -18,6 +19,9 @@
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
     }
   },
   "devDependencies": {
@@ -31,6 +35,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.9.0",
+    "fast-glob": "^3.2.12",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.1",
     "postcss-scss": "^4.0.6",

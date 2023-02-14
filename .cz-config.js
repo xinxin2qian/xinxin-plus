@@ -1,3 +1,24 @@
+const fg = require('fast-glob');
+
+const getPackages = packagePath => fg.sync('*', { cwd: packagePath, onlyDirectories: true });
+const scopes = [
+  ...getPackages('packages'),
+  ...getPackages('internal'),
+  'docs',
+  'play',
+  'project',
+  'core',
+  'style',
+  'ci',
+  'dev',
+  'deploy',
+  'other',
+  'typography',
+  'color',
+  'border',
+  'var',
+  'ssr'
+];
 module.exports = {
   types: [
     { value: 'feat', name: 'feat:     新功能' },
@@ -15,6 +36,7 @@ module.exports = {
     { value: 'revert', name: 'revert:   回滚到上一个版本' },
     { value: 'build', name: 'build:    编译相关的修改，例如发布版本、对项目构建或者依赖的改动' }
   ],
+  scopes,
   // override the messages, defaults are as follows
   messages: {
     type: '请选择提交类型:',
