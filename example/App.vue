@@ -23,7 +23,7 @@
   <xin-button disabled type="primary">禁止</xin-button>
   <xin-button circle type="primary">圆</xin-button>
 </template>
-<script lang="ts" setup name="XinButton">
+<script lang="ts" setup>
   const hanlderClick = () => {
     console.log('hanlderClick');
   };

@@ -5,7 +5,7 @@ const scopes = [
   ...getPackages('packages'),
   ...getPackages('internal'),
   'docs',
-  'play',
+  'example',
   'project',
   'core',
   'style',

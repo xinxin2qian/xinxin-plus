@@ -5,7 +5,7 @@ import App from './App.vue';
 import '@xinxin-plus/theme-chalk/src/index.scss';
 import XinUI from '@xinxin-plus/components';
 // import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
+// import 'ant-design-vue/dist/antd.css';
 
 const app = createApp(App);
 // app.use(XinButton)
