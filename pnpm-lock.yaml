@@ -9,6 +9,7 @@ importers:
       '@commitlint/config-conventional': ^17.4.2
       '@typescript-eslint/eslint-plugin': ^5.50.0
       '@typescript-eslint/parser': ^5.51.0
+      '@vitejs/plugin-vue': ^3.1.2
       '@xinxin-plus/components': workspace:^1.0.0
       '@xinxin-plus/constants': workspace:^1.0.0
       '@xinxin-plus/eslint-config': workspace:^1.0.0
@@ -33,6 +34,7 @@ importers:
       stylelint-order: ^6.0.1
       stylelint-scss: ^4.3.0
       typescript: ^4.9.4
+      vite: ^3.1.8
       vitepress: 1.0.0-alpha.46
       vue: ^3.2.36
     dependencies:
@@ -48,6 +50,7 @@ importers:
       '@commitlint/config-conventional': 17.4.2
       '@typescript-eslint/eslint-plugin': 5.50.0_o6ewljbj247dtzzkns6ax7wsu4
       '@typescript-eslint/parser': 5.51.0_zkdaqh7it7uc4cvz2haft7rc6u
+      '@vitejs/plugin-vue': 3.2.0_vite@3.2.5+vue@3.2.36
       cz-conventional-changelog: 3.3.0
       cz-customizable: 7.0.0
       eslint: 8.33.0
@@ -66,6 +69,7 @@ importers:
       stylelint-order: 6.0.1_stylelint@14.16.1
       stylelint-scss: 4.3.0_stylelint@14.16.1
       typescript: 4.9.4
+      vite: 3.2.5_sass@1.58.0
       vitepress: 1.0.0-alpha.46_psiolsmxwauu3dxragcyzgaufy
       vue: 3.2.36
 
@@ -1070,6 +1074,17 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 3.2.5
+    dev: true
+
+  /@vitejs/plugin-vue/3.2.0_vite@3.2.5+vue@3.2.36:
+    resolution: {integrity: sha512-E0tnaL4fr+qkdCNxJ+Xd0yM31UwMkQje76fsDVBBUCoGOUPexu2VDUYHL8P4CwV+zMvWw6nlRw19OnRKmYAJpw==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      vite: ^3.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 3.2.5_sass@1.58.0
+      vue: 3.2.36
     dev: true
 
   /@vitejs/plugin-vue/4.0.0_vite@4.1.2+vue@3.2.47:
@@ -4520,6 +4535,40 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 2.79.1
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /vite/3.2.5_sass@1.58.0:
+    resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': '>= 14'
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.15.18
+      postcss: 8.4.21
+      resolve: 1.22.1
+      rollup: 2.79.1
+      sass: 1.58.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
