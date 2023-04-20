@@ -1,6 +1,6 @@
 <template>
   <h1>我是开发调试页面</h1>
-  <!-- <xin-button type="info" size="small">我是button组件</xin-button> -->
+  <xin-button type="info" size="small">我是button组件</xin-button>
   <xin-button-group>
     <xin-button size="small" @click="hanlderClick"> button </xin-button>
     <xin-button size="small" type="primary"> button </xin-button>
@@ -23,9 +23,8 @@
   <xin-button disabled type="primary">禁止</xin-button>
   <xin-button circle type="primary">圆</xin-button>
 </template>
-<script lang="ts" setup>
+<script lang="ts" setup name="XinButton">
   const hanlderClick = () => {
-    // console.log('hanlderClick');
-    // const name = 'xinxinqian';
+    console.log('hanlderClick');
   };
 </script>

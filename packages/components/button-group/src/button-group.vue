@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({
-  name: "XinButtonGroup"
-})
+  import { defineComponent } from 'vue';
+  export default defineComponent({
+    name: 'XinButtonGroup'
+  });
 </script>
