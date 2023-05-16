@@ -10,3 +10,4 @@ export default {
   install,
   version
 };
+export * from './components';

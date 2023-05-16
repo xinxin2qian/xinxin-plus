@@ -3,3 +3,4 @@ docs/.vitepress/cache
 docs/.vitepress/dist
 packages/components/dist/
 packages/xinxin-plus/
+dist/

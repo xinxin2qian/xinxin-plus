@@ -7,6 +7,7 @@ const scopes = [
   'docs',
   'example',
   'project',
+  'scripts',
   'core',
   'style',
   'ci',

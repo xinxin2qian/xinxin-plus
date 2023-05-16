@@ -2,6 +2,12 @@
   "name": "xinxin-plus",
   "version": "1.0.0",
   "description": "",
+  "main": "dist/lib/index.js",
+  "module": "dist/es/index.mjs",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "pnpm -C example dev",
     "lint:fix": "eslint . --fix",
@@ -15,7 +21,13 @@
     "commit": "git-cz",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs --port 8080"
+    "docs:preview": "vitepress preview docs --port 8080",
+    "build:css": "gulp -f scripts/gulpfile.ts",
+    "build:components": "pnpm -C packages/components build",
+    "build:utils": "pnpm -C packages/utils build",
+    "rm": "rimraf ./dist",
+    "build": "rimraf dist && vite build --config ./scripts/vite.config.ts && pnpm run build:css",
+    "release": "npm publish"
   },
   "author": "",
   "license": "MIT",
@@ -41,6 +53,10 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.9.0",
     "fast-glob": "^3.2.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^5.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.1",
     "postcss-scss": "^4.0.6",
@@ -53,15 +69,11 @@
     "stylelint-scss": "^4.3.0",
     "typescript": "^4.9.4",
     "vite": "^3.1.8",
+    "vite-plugin-dts": "^2.3.0",
     "vitepress": "1.0.0-alpha.46",
     "vue": "^3.2.36"
   },
   "dependencies": {
-    "@xinxin-plus/components": "workspace:^1.0.0",
-    "@xinxin-plus/constants": "workspace:^1.0.0",
-    "@xinxin-plus/eslint-config": "workspace:^1.0.0",
-    "@xinxin-plus/theme-chalk": "workspace:^1.0.0",
-    "@xinxin-plus/utils": "workspace:^1.0.0",
     "postcss": "^8.4.19"
   }
 }

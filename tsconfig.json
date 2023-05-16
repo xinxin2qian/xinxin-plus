@@ -17,12 +17,19 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@xinxin-plus/*": [
+        "packages/*"
+      ]
+    }
     // "types": ["unplugin-vue-define-options/macros-global" /* ... */]
   },
   "exclude": [
     "node_modules",
     "**/__tests__",
-    "dist/**"
+    "dist/**",
+    "example"
   ]
 }
