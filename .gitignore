@@ -4,3 +4,5 @@ docs/.vitepress/dist
 packages/components/dist/
 packages/xinxin-plus/
 dist/
+scripts/publish.ts
+.vitepress/

@@ -8,6 +8,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "http://localhost:8081/repository/local-npm/"
+  },
   "scripts": {
     "dev": "pnpm -C example dev",
     "lint:fix": "eslint . --fix",
@@ -27,7 +30,7 @@
     "build:utils": "pnpm -C packages/utils build",
     "rm": "rimraf ./dist",
     "build": "rimraf dist && vite build --config ./scripts/vite.config.ts && pnpm run build:css",
-    "release": "npm publish"
+    "release": "node scripts/publish.ts"
   },
   "author": "",
   "license": "MIT",
