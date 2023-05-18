@@ -78,5 +78,8 @@
   },
   "dependencies": {
     "postcss": "^8.4.19"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.36"
   }
 }
